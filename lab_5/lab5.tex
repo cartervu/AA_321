@@ -1,0 +1,61 @@
+%\author{D. Crews}
+
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{mathabx}
+\usepackage[margin=1.0in]{geometry}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{roman}
+
+\begin{document}
+\title{\Large {\bf AA 321 | Aerospace Laboratory\\Lab Five: Lift and Drag of a Finite Wing}\\[1ex]
+  University of Washington}
+\date{\today}
+\maketitle
+%\tableofcontents
+
+\section{Background and objectives}\label{objs}
+In this experiment the variation of lift, drag, and pitching moment of a finite (3D) wing will be determined \textit{with} and \textit{without} circular end caps as a function of angle of attack in the Kirsten Wind Tunnel (KWT). You will gain experience in analyzing wind tunnel testing data as well as learn from the flow structures observed in the visualization experiments.
+
+As we've learned, viscosity gives rise to a boundary layer which induces pressure and skin friction drag, yet also is also responsible for lift through the total aerodynamic force on the body. Severe loss of lift occurs when the boundary layer separates, an effect called stall. The main difference between this experiment and the previous ``2D'' wing is that the span-ends are capped with wingtips (of course) which lead to wingtip vortices. The full wing results are different from those of the ``2D'' wing with the same airfoil in that there is an \textit{induced drag} and a \textit{change of lift curve slope}.
+
+The model tested is a straight wing with a NACA 23012 airfoil. The two tests conducted are wing only (baseline case) and wing with circular end caps. The tests are to be conducted at $q_{\text{nom}}$ of 10 psf and 35 psf as well as angles of attack from $-4^\circ$ to $+10^\circ$ in $2^\circ$ steps, after which the step size is reduced to $1^\circ$ until $\alpha = 20^\circ$ or more, if necessary, to go past the maximum lift point. Data will also be collected in steps going back to zero in the same increments.
+
+\section{Data reduction and report}
+Data and photos from each run have been provided. Balance interactions, strut drag tare, and tunnel corrections are already incorporated into these lift, drag, and moment coefficient data. In addition, one set of ``raw'' data for the strut tare and for the baseline case with $q=10$ psf will be provided. All data are reported with respect to the angle of attack ($\alpha$) as determined from $\alpha$-calibration.
+
+Be sure to watch the video before beginning your analysis!
+\newpage
+In your report please address the following questions:
+\begin{enumerate}[noitemsep]
+\item For the baseline wing configuration, determine $C_L$, $C_D$, and $C_M$ at the one angle of attack $\alpha = 10^\circ$, and also determine $\alpha_{\text{max}}$ from \textbf{uncorrected} data provided at \textbf{q=10 psf}. Use the wing geometry measurements, strut drag, tare data, weight tare data, and the following balance interaction matrix for these calculations,
+  \begin{equation}
+    \begin{bmatrix} L\\ D\\ M_P\end{bmatrix} = \begin{bmatrix} a_1 & b_1 & c_1\\ a_2 & b_2 & c_3\\ a_3 & b_3 & c_3\end{bmatrix}\begin{bmatrix} L_R\\ D_R\\ M_{P,R}\end{bmatrix}
+  \end{equation}
+  where $L_R$, $D_R$, and $M_{P,R}$ (or LIFTR, DRAGR, and PMR) are the raw forces (lift and drag) and raw moment \textit{before} balance interaction corrections. The needed coefficients have been provided by KWT. Explain any differences between your results and the processed data provided by KWT for the same test conditions. The strut drag tare data (NDRAG) is also provided, and is to be applied in the following manner (see tare data file for more details),
+  \begin{align}
+    D_{\text{after tare}} &= D_{\text{before tare}} - \text{NDRAG}*q\\
+    M_{P,\text{ after weight tare}} &= M_{P,\text{ before weight tare}} - \text{PMWT}
+  \end{align}
+  where PMWT is the pitch-moment weight tare. The KWT balance normally records all three forces (lift, drag, and side force) and the moments of pitch, yaw, and roll. The resulting data include the above quantites (LIFTR, DRAGR, PMR, YMR, RMR, and SFR) and the corresponding coefficients (CLWA25, CDWA25, CMWA25, CNWA25, CRWA25, CYWA25). For this experiment only the three components of lift, drag, and pitch-moment and their coefficients will be considered.
+\item What is the aspect ratio of the wing?
+\item Plot $C_L$ vs. $\alpha$, $C_D$ vs. $\alpha$, $C_M$ vs. $\alpha$, $L/D$ vs. $\alpha$, and $C_L$ vs. $C_D$, \textbf{with} and \textbf{without} the circular end-caps (use more than one plot to avoid clutter). Use ALPHAC from corrected data for the angle-of-attack.
+\item Using the relation
+  \begin{equation}
+    C_D = C_{D,p} + \frac{1}{\pi\text{AR} e}C_L^2
+  \end{equation}
+  where $e$ is the span efficiency factor and $C_{D,p}$ the parasitic drag, determine $e$ and $C_{D,p}$.
+\item Using the posted 2D lift-curve slope for this airfoil, calculate the 3D lift-curve slope and compare it to your experimental results for the baseline case. Explain any differences.
+\item What does china clay flow visualization tell you about the behavior of the flow around the wing tips \textbf{with} and \textbf{without} the circular endcaps?
+\item Since increasing the aspect ratio can reduce a wing's induced drag, why do commercial aircraft have AR $\sim 7$ instead of perhaps 20-30 or more? Why do some commercial aircraft have winglets?
+\item Comment on the reason circular end caps were tested and if they would have application on a real aircraft, past or present (or future!).
+\item Comment on any hysteresis produced after the wing was stalled and flow may not have reattached when the wing returned to an angle that previously had high lift values. Comment on how this could impact real aircraft during takeoff or landing conditions.
+\end{enumerate}
+% \bibliography{lab3}
+
+\end{document}

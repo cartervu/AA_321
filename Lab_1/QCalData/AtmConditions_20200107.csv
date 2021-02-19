@@ -1,0 +1,4 @@
+TimeOfDay, Temperature, Pressure, Humidity
+None, deg_C, mbar, %
+'12:41', 16.6, 1024, 53
+'14:38', 19.6, 1023, 46

@@ -1,0 +1,55 @@
+%\author{D. Crews}
+
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{mathabx}
+\usepackage[margin=1.0in]{geometry}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{roman}
+
+\begin{document}
+\title{\Large {\bf AA 321 | Aerospace Laboratory\\Lab Three: 2D Wing}\\[1ex]
+  University of Washington}
+\date{\today}
+\maketitle
+%\tableofcontents
+
+\section{Background and objectives}\label{objs}
+The purpose of this experiment is to introduce another method of measuring aerodynamic forces on a body. Forces in these experiments will be determined by monitoring static pressures at various locations on a NACA 0016 two-dimensional wing, mounted vertically in the 3x3 wind tunnel. There are 43 static pressure ports on the wing surface around its midspan, one at the tip of the leading edge, and 21 on each side of the wing. For this experiment a ``pitch and pause'' method is used because the wing must be at a stable condition to allow the Scanivalve to sequentially scan all ports, which takes about one minute per angle of attack. The wing angle of attack $\alpha$ is varied from $-4^\circ$ to $+20^\circ$ for four different values of $q$. You will process these pressure data to determine the drag, lift, and pitching moment coefficients of the 2D wing as a function of q and $\alpha$. Tufts have been attached to the wing surface to facilitate visualization of the flow behavior, as well as a stream from a fog machine to visualize streamlines.
+
+The data collected consists of the following test matrix:
+\begin{enumerate}[noitemsep]
+\item Indicated: $q$, $20$, $30$, $40$, and $45$ psf
+\item Angles of attack: $-4^\circ$, $-2^\circ$, $0^\circ$, $2^\circ$, $4^\circ$, $6^\circ$, $8^\circ$, $10^\circ$, $12^\circ$, $14^\circ$, $16^\circ$, $18^\circ$, $20^\circ$
+\end{enumerate}
+Be sure to watch the video before beginning your analysis!!
+
+During the experiment, the tufts and fog machine indicate the dynamic behavior of the flow over the wing at various angles-of-attack. In laminar conditions, the tufts are straight and aligned in the direction of local flow. In turbulent conditions the tufts wiggle at amplitudes and frequencies dependent on the level of turbulence. \textit{Hand sketches of fog/tuft behavior are expected to be in your notebooks for this lab.} Be sure to observe the flow carefully, in particular the sudden changes between qualitative ``regimes'' of flow.
+
+
+\newpage
+\section{Data reduction and questions}
+The files you've been given consists of about five different complete data sets. Look through all of these sets and analyze the one which you find to be the highest quality. Then consider the following in analysis of the data provided, where all tested $q_{\text{ind}}$ should be on the same plot unless otherwise stated:
+\begin{enumerate}[noitemsep]
+\item Choose a value of $q_{\text{ind}}$ and plot the pressure data as a function of port number for three angles of attack (all on the same plot). Comment!
+\item Plot the pressure coefficient $c_p$ vs. $x/c$ for each $q_{\text{ind}}$ (use multiple plots if necessary).
+\item Plot the lift coefficient $c_\ell$ vs. angle of attack $\alpha$. Compare with theory.
+\item Plot the drag coefficient $c_D$ vs. angle of attack $\alpha$.
+\item Plot the center of pressure location $x_{\text{cp}}$ vs. angle of attack $\alpha$.
+\item The moment coefficient $c_m$ about the quarter chord vs. $\alpha$, and compare with theory.
+\item Determine the angle of attack at which the wing generates zero lift.
+\item Why were you told to use $q_{\text{ind}}$ instead of $q_{\text{true}}$ for the above analysis?
+\item Describe your observations of the flow visualization.
+\item Determine the stall angle. How does it compare with the flow observations?
+\item What influence might the tufts have on the stall angle so determined?
+\item Comment on possible experimental errors and their degree of influence on the data/analysis.
+\item Comment on the effect and degree of influence that ambient temperature has on the data set.
+\end{enumerate}
+% \bibliography{lab3}
+
+\end{document}
