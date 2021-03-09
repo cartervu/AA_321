@@ -32,7 +32,6 @@ for colnum = 1:2
     for rownum = 1:2
         figure()
         plot(DataArray{rownum,colnum}(:,2),DataArray{rownum,colnum}(:,1))
-        title(NameArray(rownum,colnum))
         xlabel("Time (sec)")
         ylabel("Voltage (V)")
         grid on
@@ -201,7 +200,8 @@ for colnum = 1:2
         plot(times(1:s-1),cvals)
         grid on
         reportedcvals{rownum,colnum} = stat_digital(cvals);
-        title(strcat("Variation in Damping Coefficient vs. Time","(",NameArray(rownum,colnum),")"))
+        title("Variation in Damping Coefficient vs. Time")
+        subtitle(NameArray(rownum,colnum))
         xlabel("Time (sec)")
         ylabel("Damping Coefficient c")
         set(gca,'FontSize',20)
