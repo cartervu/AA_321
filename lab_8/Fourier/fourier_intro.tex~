@@ -1,0 +1,55 @@
+%\author{D. Crews}
+
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{mathabx}
+\usepackage[margin=1.0in]{geometry}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{roman}
+
+\begin{document}
+\title{\Large {\bf AA 321 | Aerospace Laboratory\\Lab Seven: Stress Concentration}\\[1ex]
+  University of Washington}
+\date{\today}
+\maketitle
+%\tableofcontents
+
+\section{Background and objectives}\label{objs}
+The state of stress at various points on a thin, performatd aluminum sheet is determined by means of electrical resistance strain gauges. The test specimen has a 1-in diameter hole at its center. The loads have been applied with the department's Dillon manual testing machine.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.55\textwidth]{stress_pic}
+  \caption{Plate with hole loaded in tension, equipped with appropriate strain gauges.}
+\end{figure}
+
+Strain gauges have been installed on the specimen at locations 1, 2, and 3. In addition, a strain gauge rosette, consisting of three strain gauges mounted on a common center at 45$^\circ$ to each other, has been installed at locations 4-6 (same spot). The dimensions of the specimen and locations of the strain gauges are provided on a separate sheet.\\
+
+Testing procedure:
+\begin{itemize}
+\item Six tensile loads were applied to the specimen: $300$, $400$, $500$, $700$, $800$, and $1000$ lbs.
+\item In each run, the test specimen was ``detorqued'' (see video) after reaching the test load, so look for the section of the testing data where the strain on gauge 5 is $\sim 0$ (or at least, much less than that on gauges 4 and 6). Take this to be the measurement.
+\item As usual, positive strain indicates tension while negative values represent compression.
+\end{itemize}
+
+\newpage
+\section{Data reduction and report}
+Be sure to watch the video before your analysis! Please address the following questions:
+\begin{enumerate}[noitemsep]
+\item Calculate the stress value $\sigma_y$ which would exist without a hole.
+\item Calculate the stresses $\sigma_y$ at points 1 and 2 and $\sigma_x$ at point 3 from the measured strains (assume uniaxial stress at these points).
+\item Compare the measured stresses at 1, 2, and 3 with the result of question 1 as well as with the theoretical values predicted for a plate with a hole in it.
+\item From the strain rosette measurements (4-6) determine the magnitudes and directions of the principal stresses $\sigma_1$ and $\sigma_2$ at the center of the rosette. Note the directions of the applied strain gauges.
+\item Determine the magnitudes of the stress components $\sigma_r$, $\sigma_\theta$, and $\tau_{r\theta}$ in the radial and tangential directions at the center of the rosette. Compare the results to the theoretical values and explain any discrepancies. 
+\item How might the accuracy of local stress measurements with strain gauges be improved?
+\item If the yield strength of the specimen be $50000$ psi, what is the maximum load that can be applied before the specimen yields?
+\item How might the stress concentration problem be alleviated?
+\end{enumerate}
+Assume that $E = 10^7$ psi and $\nu = 0.34$ (Poisson ratio) for your calculations.
+
+\end{document}

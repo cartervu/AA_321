@@ -240,9 +240,9 @@ for colnum = 1:2
         xlabel('Frequency [Hz]')
         ylabel('Amplitude |V|')
         grid on
+
         title(strcat("Frequency Analysis of ",NameArray(rownum,colnum)))
         set(gca,'FontSize',20)
-        saveas(gcf,strcat("fourier_",NameArray(rownum,colnum),".jpg"))
     end
 end
 
